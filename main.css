@@ -124,7 +124,7 @@
 
 
   .width1 {
-    width: clamp(10rem, 85vw, 80rem);
+    width: clamp(10rem, 85vw, 75rem);
   } .marginauto {
     margin:0 auto;
   }
@@ -173,7 +173,7 @@
   }
 
   .logo_a {
-    width: clamp(10rem, 62vw, 23rem);
+    width: clamp(10rem, 62vw, 22rem);
     display: flex;
     z-index: 2;
   }
@@ -516,9 +516,9 @@
   }
 
   .intro_area {
-    gap: clamp(2rem, calc(20vw - 10rem), 4rem);
+    gap: clamp(2rem, calc(20vw - 10rem), 3rem);
   } .intro_info {
-    margin: clamp(0rem, calc(12vw - 7rem), 4rem) 0 0 0;
+    margin: clamp(0rem, calc(6vw - 4rem), 4rem) 0 0 0;
     min-width: 27rem;
   }
 
@@ -631,7 +631,7 @@
   } .hambt {
     display: none;
   } .logo_a {
-    width: clamp(10rem, 30vw, 23rem);
+    width: clamp(10rem, 30vw, 22rem);
   }
 
 
