@@ -209,7 +209,7 @@
     margin: clamp(1rem, calc(30vw - 4.5rem), 2rem) 0 clamp(7rem, 30vw, 13rem) 0;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
     align-items: flex-start;
     max-width: 25rem;
   } .intro_img {
@@ -288,7 +288,7 @@
     align-items: stretch;
     gap: 1rem;
     background-color: rgb(245 245 255 / 70%);
-    padding: 1rem;
+    padding: clamp(1rem, 4vw, 2rem);
     border-radius: 0.8rem;
     backdrop-filter: blur(4px);
     border: 1px solid white;
