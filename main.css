@@ -33,6 +33,7 @@
     --lightb: #f5f5ff;
     --lightc:#F2F2F2;
     --grey: #939191;
+    --greya:#a2a0c7;
     --dark: #0A070B;
     --c1:#3F37C9;
     --c1a:#746fcf;
@@ -227,11 +228,12 @@
     display: inline-block;
     background-color: var(--lightb);
     border-radius: 0.8rem;
-    border: 1px solid var(--lighta);
+    font-weight: 600;
   } .cta2 {
     display: flex;
     align-items: center;
     padding: 0 1rem;
+    font-weight: 600;
   } .cta_ctnr {
     display: flex;
     flex-direction: row;
@@ -242,6 +244,7 @@
     font-weight: 600;
     line-height: clamp(1.3rem, 7vw, 1.8rem);
     width: 95%;
+    color: var(--c1a);
   }
 
   .form_section {
@@ -273,10 +276,11 @@
   } .bullet1 p {
     font-size: clamp(0.9rem, 5vw, 0.95rem);
     line-height: clamp(1.2rem, 7vw, 1.5rem);
-    color: var(--c1a);
+    color: var(--greya);
     width: 90%;
+    font-weight: 600;
   } .bullets1_ctnr a {
-    font-weight: 900;
+    font-weight: 600;
     background-color: var(--light);
     padding: 0.6rem 1.2rem;
     border-radius: 0.6rem;
@@ -335,10 +339,10 @@
     cursor: pointer;
   }
 
-  .quotes_section {
+  .quotes_section, .faq_section {
     background-color: var(--lightc);
     padding: clamp(3rem, 7vw, 7rem) 0 6rem 0;
-  } .quotes_section h3 {
+  } .quotes_section h3, .faq_section h3 {
     text-align: center;
     font-size: clamp(1.4rem, 7vw, 2.4rem);
     width: clamp(14rem, 80vw, 41rem);
@@ -375,7 +379,7 @@
     gap:1.5rem;
   } .footer_info {
     display: flex;
-    padding: 7rem 0;
+    padding: clamp(3rem, 8vw, 7rem) 0 clamp(2rem, 8vw, 7rem);
   } .footer_bottom {
     background-color: var(--c1);
     padding: 2rem 0;
@@ -406,6 +410,87 @@
     margin: 0.3rem 0 1.4rem;
     letter-spacing: 1px;
   }
+
+.faq_section {
+  background-color:var(--lighta);
+} .faq_section h3 {
+  margin-bottom: 2rem;
+}
+
+
+.collapsible {
+  color: var(--white01);
+  cursor: pointer;
+  padding: 2rem 3rem 2rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  background-color: var(--lightb);
+  border: none;
+  text-align: left;
+  border: none;
+  position: relative;
+  transition: background-color 0.3s ease;
+  border: 2px solid var(--light);
+  border-radius: 0.6rem;
+} .collapsible:hover {
+  background-color:var(--light);
+  transition: background-color 0.05s ease;
+} .collapsible > div {
+  width: clamp(1.7rem, 2vw, 2rem);
+  height: clamp(1.7rem, 2vw, 2rem);
+  background: var(--c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: clamp(0.5rem, 2vw, 1rem);
+  top: clamp(0.5rem, 2vw, 1rem);
+  border-radius: 0.4rem;
+  background-image: url(assets/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: clamp(0.6rem, 1vw, 0.7rem);
+} .collapsible > div div {
+  width: 0.6rem;
+  height: 0.6rem;
+} .active {
+  background-color:var(--lightb);
+} .active > div {
+  background-image: url(assets/minus.svg);
+}  .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--green02);
+} .content p {
+  padding: 1rem 2rem 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--greya);
+  line-height: 1.6rem;
+} .question_ctnr {
+  display: flex;
+  flex-direction: column;
+  width: clamp(10rem, 85vw, 50rem);
+  margin: 0 auto 1rem auto;
+  background-color: var(--light);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -476,7 +561,7 @@
 
   .footer_bottom .footer_area {
     align-items: center;
-    gap: clamp(1.5rem, calc(40vw - 21rem), 21rem);
+    justify-content: space-between;
   }
 
   .footer_bottom nav {
@@ -494,7 +579,8 @@
   }
 
   .footer_bottom nav a {
-    padding: 0.7rem 1vw;
+    padding: 0.7rem clamp(1rem, calc(3.5vw - 1.4rem), 3rem);
+    border: none;
   }
 }
 
