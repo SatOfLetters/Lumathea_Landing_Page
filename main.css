@@ -36,6 +36,7 @@
     --dark: #0A070B;
     --c1:#3F37C9;
     --c1a:#746fcf;
+    --c1b:#463ecf;
     --c2:#7209B7;
     --c3:#F72585;
   }
@@ -268,9 +269,10 @@
   } .bullet1 h4 {
     font-size: clamp(1rem, 5vw, 1.2rem);
     font-weight: 800;
+    width: 80%;
   } .bullet1 p {
-    font-size: clamp(0.9rem, 5vw, 1rem);
-    line-height: clamp(1.2rem, 7vw, 1.6rem);
+    font-size: clamp(0.9rem, 5vw, 0.95rem);
+    line-height: clamp(1.2rem, 7vw, 1.5rem);
     color: var(--c1a);
     width: 90%;
   } .bullets1_ctnr a {
@@ -366,17 +368,44 @@
 
   footer {
     color: var(--light);
-    background-color: var(--c1);
-  }
-
-  .footer_info {
-    display:flex;
+    background-color: var(--c1b);
+  } .footer_area {
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+  } .footer_info {
+    display: flex;
+    padding: 7rem 0;
   } .footer_bottom {
     background-color: var(--c1);
-  } .footer_area {
-    display:flex;
+    padding: 2rem 0;
+  } .footer_bottom nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  } .footer_bottom nav a {
+    padding: 0.7rem 1rem;
+    font-weight: 100;
+    color: var(--lighta);
+    border: 2px solid var(--c1b);
+    border-radius: 0.6rem;
+  } .footer_info h3 {
+    font-size: clamp(1.4rem, 8vw, 2.6rem);
+    max-width: 28rem;
+  } .social_icons_ctnr {
+    display: flex;
+    gap: clamp(0.6rem, 4vw, 1rem);
+    margin: 1rem 0;
+  } .social_icons_ctnr a {
+    width: clamp(1.2rem, 6vw, 1.4rem);
+  } footer h4 {
+    font-size: clamp(1rem, 5.5vw, 1.1rem);
+    color: var(--c1a);
+  } footer > div p {
+    font-size: clamp(0.7rem, 4vw, 1.2rem);
+    margin: 0.3rem 0 1.4rem;
+    letter-spacing: 1px;
   }
-
 
 
 
@@ -439,7 +468,46 @@
   .info_box {
     max-width: clamp(17rem, 33vw, 25rem);
   }
+  
+  .footer_area {
+    flex-direction: row;
+    gap: clamp(3rem, calc(30vw - 20rem), 20rem);
+  }
+
+  .footer_bottom .footer_area {
+    align-items: center;
+    gap: clamp(1.5rem, calc(40vw - 21rem), 21rem);
+  }
+
+  .footer_bottom nav {
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+  .footer_logo_a {
+    width: clamp(15rem, 25vw, 18rem);
+  }
+
+  .footer_info h3 {
+    margin: -0.4rem 0 3rem 0;
+  }
+
+  .footer_bottom nav a {
+    padding: 0.7rem 1vw;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
