@@ -189,6 +189,7 @@
     box-sizing: border-box;
     background-color: var(--light);
     z-index: 2;
+    cursor: pointer;
   } .hambt div {
     background-color: var(--c3);
     border-radius: 0 0 0 0.3rem;
@@ -280,7 +281,7 @@
   }
 
   .form_area {
-    gap: clamp(1rem, 6vw, 4rem);
+    gap: clamp(1rem, 6vw, 7rem);
   } .form_ctnr {
     display: flex;
     flex-direction: column;
@@ -292,7 +293,8 @@
     border-radius: 0.8rem;
     backdrop-filter: blur(4px);
     border: 1px solid white;
-    margin-top: 1rem;
+    width: clamp(12rem, 75vw, 24rem);
+    margin: 1rem auto 0 auto;
   } .form_ctnr > p {
     font-size: clamp(1.2rem, 7vw, 1.8rem);
     font-weight: 700;
@@ -362,6 +364,18 @@
   }
 
 
+  footer {
+    color: var(--light);
+    background-color: var(--c1);
+  }
+
+  .footer_info {
+    display:flex;
+  } .footer_bottom {
+    background-color: var(--c1);
+  } .footer_area {
+    display:flex;
+  }
 
 
 
@@ -419,11 +433,11 @@
     gap: 1rem;
     justify-content: space-between;
   } .form_section h3 {
-    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
   }
 
   .info_box {
-    max-width: clamp(17rem, 33vw, 28rem);
+    max-width: clamp(17rem, 33vw, 25rem);
   }
 }
 
