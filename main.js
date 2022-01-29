@@ -57,4 +57,6 @@ var coll = document.getElementsByClassName("collapsible");
         });
         }
 
-        document.querySelector('.opened').click()
+        setTimeout(() => {
+            document.querySelector('.opened').click()
+        }, 500);

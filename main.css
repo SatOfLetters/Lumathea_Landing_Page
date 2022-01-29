@@ -31,7 +31,7 @@
     --light: #ffffff;
     --lighta: #E2E6E9;
     --lightb: #f5f5ff;
-    --lightc:#F2F2F2;
+    --lightc:#f0f3f4;
     --grey: #939191;
     --greya:#a2a0c7;
     --dark: #0A070B;
@@ -151,6 +151,7 @@
     font-weight: 600;
     margin: 0 auto;
     border-radius: 0 0 1rem 1rem;
+    box-sizing: border-box;
   } .showing_nav {
     transform: translateY(0%);
     opacity: 1;
@@ -162,6 +163,7 @@
     background-color: var(--light);
     border-radius: 0.4rem;
     box-shadow: 0 0.3rem 0.6rem -0.6rem var(--c1a);
+    font-size: 1rem;
   }
 
   header {
@@ -207,6 +209,8 @@
 
   .intro_sec {
     overflow: hidden;
+    background-image: linear-gradient(180deg, var(--light), var(--lighta));
+    padding-bottom: 3rem;
   } .intro_info {
     margin: 0 0 2rem 0;
     margin: clamp(1rem, calc(30vw - 4.5rem), 2rem) 0 clamp(7rem, 30vw, 13rem) 0;
@@ -249,14 +253,14 @@
 
   .form_section {
     background-color: var(--lighta);
-    padding: clamp(3rem, 7vw, 7rem) 0 6rem 0;
-    background-image: url(assets/det1.svg);
-    background-size: 100%;
+    padding: clamp(3rem, 7vw, 7rem) 0 clamp(5rem, 10vw, 8rem) 0;
+    background-image: url(assets/det1.svg), linear-gradient(180deg, transparent 80%, var(--light));
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top right;
   } .form_section h3 {
     font-size: clamp(1.2rem, 7.5vw, 2.5rem);
+    font-weight: 900;
   } .bullets1_ctnr {
 
   } .bullet1 {
@@ -294,15 +298,16 @@
     justify-content: unset;
     align-items: stretch;
     gap: 1rem;
-    background-color: rgb(245 245 255 / 70%);
-    padding: clamp(1rem, 4vw, 2rem);
+    background-color: rgb(245 245 255 / 50%);
+    padding: clamp(1rem, 6vw, 2rem);
     border-radius: 0.8rem;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     border: 1px solid white;
-    width: clamp(12rem, 75vw, 24rem);
+    width: clamp(12rem, 84vw, 24rem);
     margin: 1rem auto 0 auto;
+    box-sizing: border-box;
   } .form_ctnr > p {
-    font-size: clamp(1.2rem, 7vw, 1.8rem);
+    font-size: clamp(1.2rem, 6.2vw, 1.6rem);
     font-weight: 700;
     margin-bottom: 0.2rem;
   } .form_ctnr form {
@@ -339,15 +344,18 @@
     cursor: pointer;
   }
 
-  .quotes_section, .faq_section {
+  .quotes_section {
     background-color: var(--lightc);
-    padding: clamp(3rem, 7vw, 7rem) 0 6rem 0;
-  } .quotes_section h3, .faq_section h3 {
+  }
+  .quotes_section, .faq_section, .service_features_section {
+    padding: clamp(3rem, 20vw, 6rem) 0 clamp(3rem, 7vw, 6rem) 0;
+  } .quotes_section h3, .faq_section h3, .service_features_section h3 {
     text-align: center;
     font-size: clamp(1.4rem, 7vw, 2.4rem);
     width: clamp(14rem, 80vw, 41rem);
     margin: 0 auto;
     font-weight: 800;
+    font-size: clamp(1.4rem, 7vw, 2.5rem);
   } .quote_area {
 
   }
@@ -358,8 +366,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  } .slider-container li > div div {
-    width: 80%;
+    gap:1rem;
+  } .quote {
+    width: 90%;
     height: 18rem;
     background-color: var(--lighta);
     border-radius: 0.8rem;
@@ -421,7 +430,7 @@
 .collapsible {
   color: var(--white01);
   cursor: pointer;
-  padding: 2rem 3rem 2rem 2rem;
+  padding: 1.6rem 3rem 1.6rem 2rem;
   font-size: 1.1rem;
   font-weight: 800;
   background-color: var(--lightb);
@@ -430,10 +439,10 @@
   border: none;
   position: relative;
   transition: background-color 0.3s ease;
-  border: 2px solid var(--light);
+  border-bottom: 2px solid var(--lightb);
   border-radius: 0.6rem;
 } .collapsible:hover {
-  background-color:var(--light);
+  background-color: var(--light);
   transition: background-color 0.05s ease;
 } .collapsible > div {
   width: clamp(1.7rem, 2vw, 2rem);
@@ -465,7 +474,7 @@
 } .content p {
   padding: 1rem 2rem 1rem;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--greya);
   line-height: 1.6rem;
 } .question_ctnr {
@@ -476,13 +485,98 @@
   background-color: var(--light);
   border-radius: 0.7rem;
   overflow: hidden;
+  border: 1px solid var(--light);
 }
 
+.service_features_section {
+  background-color: var(--light);
+}
 
+.features_grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:0.6rem;
+  margin: clamp(2rem, 4vw, 4rem) 0 0 0;
+} .features_grid a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
+  background: var(--lightb);
+  padding: clamp(1rem, calc(13vw - 1rem), 4rem) 1rem;
+  text-align: center;
+  line-height: 1.2rem;
+  cursor: default;
+  transition: background-color 0.6s ease;
+  border-radius: 0.5rem;
+  border: 1px solid var(--lightc);
+} .features_grid a:hover {
+  background-color: rgb(245 245 255 / 60%);
+  transition: background-color 0s ease;
+} .features_grid img {
+  width: clamp(1.5rem, 8vw, 2.3rem);
+  height: clamp(1.5rem, 8vw, 2.3rem);
+} .features_grid h4 {
+  font-weight: 600;
+  font-size: clamp(0.8rem, 4vw, 1.1rem);
+  line-height: clamp(0.9rem, 5vw, 1.3rem);
+}
 
+.service_features_area > a {
+  text-align: right;
+  display: block;
+  font-weight: 600;
+  font-size: clamp(1rem, 4.3vw, 1.15rem);
+  width: 100%;
+  margin: 1.4rem 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.6rem, 1vw, 1rem);
+  align-items: end;
+  justify-content: right;
+} .service_features_area > a img {
+  width: clamp(2.6rem, 3vw, 2.8rem);
 
+}
 
+.imgs1_section {
 
+} .imgs1_section > div:nth-of-type(1) {
+  width: 100%;
+  height: 40vw;
+  background-image: url(assets/mother-son.jpg);
+  background-size: cover;
+  background-position: 50% 0;
+} .imgs1_section article {
+  background-color: var(--c2);
+  padding: 0 0 0 clamp(2rem, 11vw, 5.5rem);
+  color: var(--light);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: clamp(18rem, 70vw, 27rem);
+  justify-content: center;
+} .imgs1_section > div:nth-of-type(2) {
+  width: 100%;
+  height: 40vw;
+  background-image: url(assets/solar_house.jpg);
+  background-size: cover;
+  background-position: center;
+} .imgs1_section h3 {
+  font-size: clamp(1.2rem, 7vw, 2.3rem);
+  line-height: clamp(1.6rem, 9vw, 2.5rem);
+  max-width: 28rem;
+} .imgs1_section h4 {
+  font-size: clamp(0.85rem, 7vw, 1.15rem);
+  line-height: clamp(1.6rem, 9vw, 1.6rem);
+  font-weight: 600;
+  max-width: 20rem;
+  color: var(--greya);
+} .imgs1_section a {
+
+}
 
 
 
@@ -508,6 +602,7 @@
 
   .intro_sec {
     padding-bottom: 6rem;
+    background-image: none;
   }
 
 
@@ -533,8 +628,8 @@
   }
 
   .form_section {
-    background-size: 40%;
-  }
+    background-image: url(assets/det1.svg), linear-gradient(180deg, transparent 60%, var(--lightb));
+  } 
 
   .form_ctnr {
     flex: 1;
@@ -581,6 +676,35 @@
   .footer_bottom nav a {
     padding: 0.7rem clamp(1rem, calc(3.5vw - 1.4rem), 3rem);
     border: none;
+  }
+  
+  
+  .features_grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .service_features_area > a {
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  .imgs1_section {
+    display:flex;
+    flex-direction: row;
+  } .imgs1_section > div:nth-of-type(1) {
+    width: 25%;
+    background-attachment: scroll;
+    height: unset;
+  } .imgs1_section > div:nth-of-type(2) {
+    width: 35%;
+    height: unset;
+    background-attachment: scroll;
+  }  .imgs1_section article {
+    width: 40%;
+    min-width: 38rem;
+    background-image: url(assets/solar_house_color.jpg);
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
